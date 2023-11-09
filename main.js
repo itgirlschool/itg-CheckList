@@ -14,10 +14,10 @@ function createFirstPage() {
   content.innerHTML = "";
   const formHTML = `
   <h1 class="title">
-  Чек лист: Готова ли ты стать Junior Frontend разработчицей?
+  Чек-лист: Готова ли ты стать Junior Frontend-разработчицей?
 </h1>
             <div class="indent">Мы подготовили чек-лист, с помощью которого ты сможешь определить свой уровень знаний и готовность стать
-                Junior Frontend разработчицей</div>
+                Junior Frontend-разработчицей.</div>
             <div class="pinkText indent">Оцени свои Hard Skills по 5 бальной шкале, где 5 - знаю отлично, а 1 - не знаю ничего</div>
 
         <div class="form indent">
@@ -237,9 +237,12 @@ function createLastPage() {
     `</div>`;
 
   //создание кнопки для перехода в начало
+  const wrBtn = document.createElement("div");
   const btnStart = document.createElement("button");
+
   btnStart.textContent = "В начало";
-  content.append(btnStart);
+  wrBtn.append(btnStart);
+  content.append(wrBtn);
 
   //переход на первую страницу
   btnStart.addEventListener("click", (e) => {
