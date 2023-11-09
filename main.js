@@ -13,6 +13,9 @@ function createFirstPage() {
   const content = document.getElementById("content");
   content.innerHTML = "";
   const formHTML = `
+  <h1 class="title">
+  Чек лист: Готова ли ты стать Junior Frontend разработчицей?
+</h1>
             <div class="indent">Мы подготовили чек-лист, с помощью которого ты сможешь определить свой уровень знаний и готовность стать
                 Junior Frontend разработчицей</div>
             <div class="pinkText indent">Оцени свои Hard Skills по 5 бальной шкале, где 5 - знаю отлично, а 1 - не знаю ничего</div>
@@ -211,7 +214,7 @@ function createLastPage() {
   // рекомендации по результату
   function conclusion() {
     if (percentResult <= 59) {
-      return `<h2>Ты можешь смело искать предложения по стажировке, но повтори перед этим следующие темы, находящиеся по ссылкам ниже:</h2>`;
+      return `<h2>Ты можешь смело искать предложения по стажировке, но повтори перед этим следующие темы:</h2>`;
     } else if (percentResult >= 60 && percentResult < 80) {
       return `<h2>Перед составлением резюме рекомендую сходить по нижеприведенным ссылкам и повторить темы:</h2>`;
     } else {
@@ -225,8 +228,8 @@ function createLastPage() {
   const content = document.getElementById("content");
   content.innerHTML =
     `<h2 class="pinkText">Отличная работа, поздравляю!</h2>` +
-    `<div class="grid"><h3>Твой результат:</h3><h3 class="pinkText">${percentResult}%</h3></div>` +
-    `<div class="grid"><h3>что соответсвтвует уровню:</h3><h3 class="pinkText">` +
+    `<div class="grid"><h3 class="result-title" >Твой результат:</h3><h3 class='result-content' class="pinkText">${percentResult}%</h3></div>` +
+    `<div class="grid"><h3 class='result-title' >что соответсвтвует уровню:</h3><h3 class="pinkText result-content">` +
     level() +
     `</h3></div>` +
     `<div>` +
